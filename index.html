@@ -78,9 +78,23 @@
     <footer id="contact" class="main-footer-contact">
         <div class="container">
             <h2>Skontaktuj się z nami</h2>
-            <p>Gotowi na rozwiązanie Twojego problemu. Zadzwoń lub napisz.</p>
-            <p><strong>Telefon:</strong> 123-456-789</p>
-            <p><strong>Email:</strong> <a href="mailto:kontakt@hydraulik-express.pl">kontakt@hydraulik-express.pl</a></p>
+            <p>Masz pytania lub potrzebujesz pilnej pomocy? Wypełnij formularz lub zadzwoń.</p>
+
+            <div class="contact-info">
+                <p><strong>Telefon:</strong> 123-456-789</p>
+                <p><strong>Email:</strong> <a href="mailto:kontakt@hydraulik-express.pl">kontakt@hydraulik-express.pl</a></p>
+            </div>
+
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Twoje imię" required>
+                    <input type="email" name="email" placeholder="Twój email" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Twoja wiadomość" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Wyślij wiadomość</button>
+            </form>
         </div>
     </footer>
 </body>
