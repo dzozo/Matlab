@@ -1,53 +1,111 @@
+/* General Body Styles */
 body {
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    padding: 0;
+    background-color: #ffffff; /* White background for content */
+    color: #333333; /* Dark gray for text for readability */
+    line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem 0;
+    background-color: #000000; /* Black header */
+    color: #ffffff;
+    padding: 1.5rem 1rem;
     text-align: center;
+    border-bottom: 5px solid #ffc107; /* Dominant yellow accent */
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
+    color: #ffc107; /* Yellow for the main title */
 }
 
+/* Navigation Styles */
 nav ul {
     padding: 0;
     list-style: none;
+    margin-top: 10px;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav a {
-    color: #fff;
+    color: #ffffff; /* White links */
     text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
+nav a:hover {
+    color: #ffc107; /* Yellow on hover */
+}
+
+/* Section Styles */
 section {
-    padding: 20px;
-    margin: 0 20px;
-    border-bottom: 1px solid #ddd;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-.project {
+section h2 {
+    font-size: 2em;
+    color: #000000; /* Black headings */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Services Section */
+#services {
+    background-color: #f9f9f9; /* Light gray background to separate from other sections */
+}
+
+.service {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-left: 5px solid #ffc107; /* Yellow accent on each service */
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    max-width: 600px;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.service h3 {
+    margin-top: 0;
+    color: #000000;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000; /* Black footer */
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer h2 {
+    color: #ffc107; /* Yellow for the contact heading */
+    font-size: 1.8em;
     margin-bottom: 20px;
 }
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+footer p {
+    margin: 10px 0;
+    font-size: 1.1em;
 }
 
 footer a {
-    color: #fff;
+    color: #ffc107; /* Yellow for the email link */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
