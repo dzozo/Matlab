@@ -1,111 +1,248 @@
-/* General Body Styles */
+/* --- Global Styles & Variables --- */
+:root {
+    --dark-bg: #121212;
+    --primary-text: #EAEAEA;
+    --secondary-text: #B3B3B3;
+    --accent-green: #32CD32; /* Lime Green */
+    --container-width: 1100px;
+    --header-height: 70px;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background for content */
-    color: #333333; /* Dark gray for text for readability */
+    background-color: var(--dark-bg);
+    color: var(--primary-text);
+    font-size: 16px;
     line-height: 1.6;
 }
 
-/* Header Styles */
-header {
-    background-color: #000000; /* Black header */
-    color: #ffffff;
-    padding: 1.5rem 1rem;
-    text-align: center;
-    border-bottom: 5px solid #ffc107; /* Dominant yellow accent */
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #ffc107; /* Yellow for the main title */
+h1, h2, h3 {
+    margin-top: 0;
+    color: var(--primary-text);
 }
 
-/* Navigation Styles */
-nav ul {
-    padding: 0;
-    list-style: none;
-    margin-top: 10px;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav a {
-    color: #ffffff; /* White links */
+a {
+    color: var(--accent-green);
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: bold;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #ffc107; /* Yellow on hover */
-}
-
-/* Section Styles */
-section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2em;
-    color: #000000; /* Black headings */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* Services Section */
-#services {
-    background-color: #f9f9f9; /* Light gray background to separate from other sections */
-}
-
-.service {
-    background-color: #ffffff;
-    border: 1px solid #eeeeee;
-    border-left: 5px solid #ffc107; /* Yellow accent on each service */
-    padding: 20px;
-    margin: 0 auto 20px auto;
-    max-width: 600px;
-    text-align: left;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-}
-
-.service h3 {
-    margin-top: 0;
-    color: #000000;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #000000; /* Black footer */
+a:hover {
     color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
 }
 
-footer h2 {
-    color: #ffc107; /* Yellow for the contact heading */
-    font-size: 1.8em;
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: var(--dark-bg);
+    border-bottom: 1px solid #282828;
+    padding: 0 1rem;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-nav ul li {
+    margin-left: 25px;
+}
+
+.main-nav a {
+    color: var(--secondary-text);
+    font-weight: bold;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--primary-text);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    padding: 80px 0;
+    text-align: left;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5em;
+    line-height: 1.2;
     margin-bottom: 20px;
 }
 
-footer p {
-    margin: 10px 0;
+.hero-text p {
+    font-size: 1.2em;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background-color: var(--accent-green);
+    color: #000000;
+    padding: 15px 30px;
     font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-footer a {
-    color: #ffc107; /* Yellow for the email link */
-    text-decoration: none;
+.cta-button:hover {
+    background-color: #2E8B57; /* SeaGreen */
+    color: #ffffff;
+    transform: translateY(-2px);
 }
 
-footer a:hover {
-    text-decoration: underline;
+.hero-image {
+    flex-basis: 400px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #282828;
+}
+
+/* --- Partners Section --- */
+.partners-section {
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #282828;
+    border-bottom: 1px solid #282828;
+}
+
+.partners-title {
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.partners-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.partners-logos img {
+    height: 40px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partners-logos img:hover {
+    opacity: 1;
+}
+
+/* --- Services Section --- */
+.services-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #282828;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+    font-size: 1.5em;
+    color: var(--accent-green);
+    margin-bottom: 15px;
+}
+
+/* --- About Section --- */
+.about-section {
+    padding: 60px 0;
+    background-color: #1a1a1a;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+/* --- Footer --- */
+.main-footer-contact {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--dark-bg);
+    border-top: 1px solid #282828;
+}
+
+.main-footer-contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.main-footer-contact p {
+    font-size: 1.2em;
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+}
+
+.main-footer-contact a {
+    font-weight: bold;
 }
